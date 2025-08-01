@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hillary's Executive Assistant Playbook</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.5rem;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            font-weight: 600;
+            color: #1f2937;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-header:hover {
+            background-color: #f9fafb;
+        }
+        .accordion-content {
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .accordion-content.active {
+            max-height: 2000px; /* Large enough to accommodate content */
+            opacity: 1;
+            visibility: visible;
+            padding: 1.5rem;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-header.active .accordion-icon {
+            transform: rotate(90deg);
+        }
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .checklist-item input[type="checkbox"] {
+            margin-right: 0.75rem;
+            width: 1.25rem; /* Ensures consistent width */
+            height: 1.25rem; /* Ensures consistent height */
+            accent-color: #4f46e5; /* Primary color for checkboxes */
+        }
+        .sop-list li {
+            margin-bottom: 0.5rem;
+        }
+        .sop-list ol, .sop-list ul {
+            list-style-type: decimal;
+            padding-left: 1.5rem;
+        }
+        .sop-list ul {
+            list-style-type: disc;
+        }
+        .sop-list strong {
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 sm:p-6 lg:p-8">
+    <div class="w-full max-w-4xl bg-white shadow-xl rounded-lg overflow-hidden">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-700 p-6 sm:p-8 text-white text-center rounded-t-lg">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-2">Hillary's Executive Assistant Playbook</h1>
+            <p class="text-indigo-100 text-lg">Your quick-reference guide to managing core business functions efficiently.</p>
+        </div>
+
+        <!-- Introduction -->
+        <div class="p-6 sm:p-8 border-b border-gray-200">
+            <p class="text-gray-700 leading-relaxed">
+                This playbook is designed to be simple and actionable, helping you stay on top of the day-to-day operations. It outlines the standard operating procedures (SOPs) for key areas, ensuring organization, prioritization, and efficient management of Hillary's business functions.
+            </p>
+        </div>
+
+        <!-- Accordion Sections -->
+        <div class="accordion-container">
+            <!-- Email Management SOPs -->
+            <div class="accordion-item">
+                <div class="accordion-header rounded-t-lg">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-1 10a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v12z"></path></svg>
+                        Email Management SOPs
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+                <div class="accordion-content">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Email Management Standard Operating Procedures (SOPs)</h3>
+                    <p class="mb-4 text-gray-600">This section outlines the standard operating procedures for managing Hillary's email inbox. The primary goal is to organize, prioritize, and respond to emails efficiently on her behalf, freeing up her time for more critical tasks.</p>
+
+                    <div class="sop-list mb-6">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">1. Initial Setup and Daily Open Tabs</h4>
+                        <p class="mb-2">Upon starting your day, open the following five tabs:</p>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Hillary’s Google Calendar</li>
+                            <li>Your Google Calendar</li>
+                            <li>Hillary’s Email Inbox</li>
+                            <li>Your Email Inbox</li>
+                            <li>Hello Email Inbox</li>
+                            <li>Relaunch Email Inbox</li>
+                        </ul>
+                        <p class="mb-4">Additionally, keep the main Slack channel and any other channels Hillary is a part of open for communication.</p>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">2. Daily Inbox Cleanup</h4>
+                        <p class="mb-2">The first task each morning is to categorize and clean up Hillary's inbox.</p>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Email Lists (Spam):</strong> Identify emails from "email lists" (e.g., "Unsubscribe" button, no yellow checkmark). Apply the "Email List" label and archive them. Create a cheat sheet of common vendors/mass senders.</li>
+                            <li><strong>General Response Emails:</strong> For unsolicited emails from people wanting to work with Hillary, respond with a pre-written template (thank them, state Hillary is not interested). Respond on her behalf. Templates are in a shared Google Sheet.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">3. Labeling and Organization</h4>
+                        <p class="mb-2">Labels are crucial for organization. Active and In Use Labels:</p>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Email List:</strong> Mass emails, promotional content.</li>
+                            <li><strong>Debbie Allen:</strong> Communication with Debbie regarding events.</li>
+                            <li><strong>Fathom Meeting Recaps:</strong> File all Fathom recordings and notes.</li>
+                            <li><strong>Global Women’s Club:</strong> Correspondence related to this program.</li>
+                            <li><strong>One-to-One Coaching Clients:</strong> Has two sub-labels: Past and Present coaching clients.</li>
+                            <li><strong>Invoices Paid:</strong> Emails confirming invoice payment.</li>
+                            <li><strong>Catherine (Iconic):</strong> Emails from Catherine regarding the website.</li>
+                            <li><strong>Relaunch Team:</strong> For organizing emails from team members after Hillary has seen/responded.</li>
+                            <li><strong>Vendors:</strong> Organizing communications with vendors/connections after follow-up.</li>
+                            <li><strong>Urgent:</strong> Time-sensitive emails requiring immediate attention.</li>
+                            <li><strong>FYI:</strong> Emails Hillary should look at but are not urgent; often for your reference.</li>
+                        </ul>
+                        <p class="mb-4"><strong>Inactive Labels:</strong> Create a parent label "Archive" and move all inactive labels (e.g., "Leave It Board") under it for historical reference without clutter.</p>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">4. Managing Connections and Fathom Meetings</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Handling Connection Emails:</strong> Respond immediately to emails from connections (e.g., Danny Berman) using the template (thank connector & connected person, include Hillary's Google Calendar link). These are time-sensitive.</li>
+                            <li><strong>Processing Fathom Meeting Recaps:</strong> Immediately open Fathom recordings. Copy link to Iconic 100 spreadsheet with name, email, next steps. Listen to the last five minutes for action steps. Send follow-up email on Hillary's behalf using a template, summarizing call and next steps.</li>
+                            <li><strong>Meeting Preparation:</strong> At least a week in advance, fill calendar event sidebar with connection source, brief summary. Find and paste LinkedIn profile if not provided. Include previous Fathom summary if Hillary has met the person before.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">5. Communication and Reporting</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>End-of-Day Text:</strong> Send Hillary a text recapping completed tasks (emails responded to, meetings scheduled, urgent items).</li>
+                            <li><strong>Urgent Emails:</strong> Reiterate any "Urgent" emails in your end-of-day text.</li>
+                            <li><strong>Early-Morning Urgent Emails:</strong> If an urgent email arrives in the morning and you don't know how to respond, text Hillary immediately for guidance.</li>
+                            <li><strong>During Travel:</strong> Be extra diligent in your email and Slack when Hillary is traveling, as she may send new tasks.</li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-6 border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Daily Checklist for Hillary’s Executive Assistant</h3>
+                    <div class="space-y-2">
+                        <div class="checklist-item"><input type="checkbox" id="em-c1"><label for="em-c1">Open all five essential tabs: Hillary’s calendar, your calendar, Hillary’s email, Hello email, and your email.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c2"><label for="em-c2">Open all relevant Slack channels.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c3"><label for="em-c3">Review Hillary's email inbox for new messages.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c4"><label for="em-c4">Go through and apply the "Email List" label to any promotional or mass emails.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c5"><label for="em-c5">Respond to any spam or unsolicited offers using the pre-written template.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c6"><label for="em-c6">Check for new connection emails from people like Danny Berman. Respond to these immediately with the appropriate template, including Hillary's calendar link.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c7"><label for="em-c7">Look for new Fathom meeting recordings.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c8"><label for="em-c8">Process the recordings: Listen to the last five minutes, add the link and details to the Iconic 100 spreadsheet, and send a follow-up email.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c9"><label for="em-c9">Check for new calendar events. If a new meeting is scheduled, add a summary and relevant information (e.g., LinkedIn profile, previous Fathom summary) to the calendar invite.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c10"><label for="em-c10">At the end of the day, send Hillary a text message with a recap of all the tasks you completed.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="em-c11"><label for="em-c11">Highlight any emails in the "Urgent" tab and mention them specifically in your end-of-day text.</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Calendar Management SOPs -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        Calendar Management SOPs
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+                <div class="accordion-content">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Calendar Management Standard Operating Procedures (SOPs)</h3>
+                    <div class="sop-list mb-6">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">1. Color-Coding System</h4>
+                        <p class="mb-2">A consistent color-coding system is used to categorize events on Hillary's calendar. Apply the appropriate color to each new event. Note that Hillary may change this system, so communicate with her to stay updated.</p>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-red-500"></span><strong>Red:</strong> Workouts</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-yellow-500"></span><strong>Yellow:</strong> Operational Meetings (e.g., team meetings, one-on-one meetings with Kristen, Patty, you, etc.)</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-blue-500"></span><strong>Blue (Impact Millionaire calls):</strong> Connect calls from external partners (e.g., Danny Burmank, Catherine, Jennifer Fry, etc.)</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-pink-500"></span><strong>Pink:</strong> Personal appointments and travel (e.g., flights, appointments, airport travel)</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-lime-500"></span><strong>Light Green:</strong> Revenue-driving events and workshops (e.g., bi-weekly webinars, LinkedIn events)</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-sky-300"></span><strong>Light Blue (Kid Time):</strong> Time blocked for calls and activities with her kids.</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-orange-500"></span><strong>Orange (Friend Time):</strong> Social engagements, such as lunch with friends.</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-purple-500"></span><strong>Purple:</strong> Growth and courses taken.</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-green-700"></span><strong>Dark Green:</strong> One-on-one coaching clients.</li>
+                            <li><span class="inline-block w-3 h-3 rounded-full mr-2 bg-purple-900"></span><strong>Dark Purple:</strong> Podcast recordings, Instagram filming, and other content creation tasks.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">2. Scheduling and Booking Principles</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Pacing:</strong> Hillary prefers no more than three back-to-back calls. Suggest rescheduling a fourth call for the next day or sending the calendar link again.</li>
+                            <li><strong>Clustering:</strong> Group similar tasks together.
+                                <ul class="list-circle ml-6 mt-2">
+                                    <li><strong>Podcast Recordings:</strong> Book on Tuesdays or Thursdays.</li>
+                                    <li><strong>Team Meetings:</strong> Schedule on Mondays and Tuesdays.</li>
+                                    <li><strong>Fridays:</strong> Prefer fewer or no calls, flexible based on priorities.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Morning Routine:</strong> Protect Hillary's dedicated two-hour morning routine. Run urgent meeting requests during this block by her first.</li>
+                            <li><strong>Booking Window:</strong> Do not book meetings more than four weeks (one month) in advance. Ideal for connection calls is within three weeks. Urgent, high-interest connections can be booked as soon as the next day or within the week.</li>
+                            <li><strong>Communication:</strong> Always communicate with Hillary about her schedule. Confirm if she wants to open a new day for calls (e.g., Fridays) or take an extra meeting.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">3. Travel Management</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Travel Schedule:</strong> Note time zone changes when Hillary travels. She is typically in-office Tuesday through Thursday when traveling.</li>
+                            <li><strong>Calendar Itinerary:</strong> Input flight information (confirmation number, departure/arrival times) at the top of her calendar.</li>
+                            <li><strong>Travel Itinerary:</strong> Create a detailed travel itinerary document outlining activities and schedule flow for the entire trip. Gather info from emails or by asking Hillary/event organizer.</li>
+                            <li><strong>Team Calendar:</strong> Update the team calendar (Hello calendar) with Hillary’s travel schedule.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">4. Team Calendar (Hello Calendar) Management</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Add the Core Team:</strong> Always add the core team (Destiny, Kristen, etc.) to any relevant calendar event.</li>
+                            <li><strong>Bi-Weekly Webinars:</strong> Add to the team calendar.</li>
+                            <li><strong>VIP Calls:</strong> Include on the team calendar.</li>
+                            <li><strong>Webinars with Outside Guests:</strong> On the team calendar, especially if promoted on LinkedIn.</li>
+                            <li><strong>Hillary’s Speaking Opportunities:</strong> Add virtual or in-person speaking engagements to the team calendar for social media awareness/promotion.</li>
+                            <li><strong>Travel Schedule:</strong> Add Hillary's travel days to the team calendar.</li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-6 border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Daily Checklist for Calendar Management</h3>
+                    <div class="space-y-2">
+                        <div class="checklist-item"><input type="checkbox" id="cm-c1"><label for="cm-c1">Open Hillary's calendar and review the day's schedule.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="cm-c2"><label for="cm-c2">Check for new meeting invitations or changes to existing meetings.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="cm-c3"><label for="cm-c3">Apply the correct color-coding to any new events.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="cm-c4"><label for="cm-c4">If a new meeting has been booked, add a summary and relevant information (e.g., LinkedIn profile, previous Fathom summary) to the calendar invite.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="cm-c5"><label for="cm-c5">Add or update any travel information and itineraries as needed.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="cm-c6"><label for="cm-c6">Ensure the team (Hello) calendar is updated with all relevant events, webinars, and Hillary's travel schedule.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="cm-c7"><label for="cm-c7">Check for any potential conflicts or overbooked periods (e.g., more than three back-to-back meetings) and communicate with Hillary if a change is needed.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="cm-c8"><label for="cm-c8">Confirm with Hillary if she wants to open her schedule for new bookings on days she typically has off.</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Travel Coordination SOPs -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                        Travel Coordination SOPs
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+                <div class="accordion-content">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Travel Coordination Standard Operating Procedures (SOPs)</h3>
+                    <div class="sop-list mb-6">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">1. Booking Flights</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Airlines:</strong> Hillary primarily flies United Airlines and occasionally JSX (for California).</li>
+                            <li><strong>Researching Flights:</strong> Research United's website for flights departing between 8:00 AM and 11:00 AM, her preferred time (also dependent on event start time).</li>
+                            <li><strong>Hillary's Involvement:</strong> Send her researched flight times; she typically books herself on her United account (First Class, upgrade list if unavailable).</li>
+                            <li><strong>JSX:</strong> You may have account access to book directly.</li>
+                            <li><strong>Ground Transportation:</strong> Hillary books her own car services (e.g., Uber). She does not use airport lounges and prefers to arrive close to boarding time.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">2. Booking Hotels</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Your Responsibility:</strong> Book Hillary's hotel accommodations.</li>
+                            <li><strong>Preferences:</strong> Generally Marriott hotels (accrues points). For short trips, no luxury hotel required.</li>
+                            <li><strong>Booking Process:</strong>
+                                <ul class="list-circle ml-6 mt-2">
+                                    <li><strong>Check with the Event Organizer:</strong> See if there's a required hotel.</li>
+                                    <li><strong>Reach out to the Point of Contact:</strong> If no required hotel, ask for a recommendation close to the venue.</li>
+                                    <li><strong>Special Requests:</strong> Call the hotel for special arrangements (e.g., double room for her and son, extra room for a guest).</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">3. Emergency Protocols</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Primary Point of Contact:</strong> You are Hillary’s primary point of contact for schedule-related emergencies (family, health).</li>
+                            <li><strong>Communication:</strong> She will contact you via phone call or text.</li>
+                            <li><strong>Calendar Management:</strong> Immediately wipe out the rest of her calendar for the day and the first half of the following morning.</li>
+                            <li><strong>Rescheduling:</strong> Reschedule canceled meetings. New dates depend on the emergency and Hillary’s availability, but a good starting point is one to two weeks out.</li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-6 border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Daily Checklist for Travel and Scheduling</h3>
+                    <div class="space-y-2">
+                        <div class="checklist-item"><input type="checkbox" id="tc-c1"><label for="tc-c1">Review Hillary's calendar for any upcoming travel.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="tc-c2"><label for="tc-c2">For flights, research potential United or JSX options and send the times to Hillary for her review and booking.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="tc-c3"><label for="tc-c3">For hotels, reach out to the event organizer to confirm the required hotel or to ask for a recommendation.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="tc-c4"><label for="tc-c4">Book the hotel for Hillary and her travel companions.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="tc-c5"><label for="tc-c5">Keep your phone on you and stay alert for any emergency calls or texts from Hillary, especially when she is traveling.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="tc-c6"><label for="tc-c6">Be prepared to clear her calendar and reschedule appointments in the event of an emergency.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="tc-c7"><label for="tc-c7">Ensure all calendar invites have the correct platform information (Zoom for calls, Riverside for podcasts, StreamYard for webinars).</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="tc-c8"><label for="tc-c8">Send the correct scheduling link (30-minute for connections, 1-hour for book interviews, or podcast link for podcast guests) to the appropriate person.</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Podcast Support SOPs -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m7 0V5a2 2 0 012-2h2a2 2 0 012 2v6m-6 0H6"></path></svg>
+                        Podcast Support SOPs
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+                <div class="accordion-content">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Podcast Support Standard Operating Procedures (SOPs)</h3>
+                    <div class="sop-list mb-6">
+                        <ul class="list-disc ml-6 mb-4">
+                            <li>Check Hillary's calendar for any completed 30-minute connection calls where she decided on a podcast guest.</li>
+                            <li>Send the prospective guest the ClickUp form.</li>
+                            <li>Follow up on any guests who have not filled out the form within a day or two.</li>
+                            <li>Once a guest submits the form, send them the "Relaunch to Rich Life" podcast recording calendar link using the provided template.</li>
+                            <li>For any direct website submissions, check with Hillary to see if she wants a pre-call, or if not, review their social media and "relaunch story" to determine their suitability.</li>
+                            <li>Check the calendar for upcoming podcast recordings.</li>
+                            <li>The day before a podcast recording, send the guest a reminder email.</li>
+                            <li>Ensure the calendar invite for the podcast recording contains the Riverside link and all attendees (Hillary, guest, and producer).</li>
+                            <li>If a guest has not confirmed their attendance, reach out to them to verify the time.</li>
+                            <li>After a podcast recording is complete, log into Riverside and get the recording link.</li>
+                            <li>Fill out and submit RJ's podcast manager form with the Riverside link and guest information.</li>
+                            <li>Check the ClickUp calendar for the podcast release date (always a Wednesday).</li>
+                            <li>On the Monday or Friday after a podcast is released, send the guest a follow-up email with the social media assets from the Hello Drive.</li>
+                            <li>Add new guest information to the shared Google Sheet for future reference.</li>
+                            <li>Be prepared to create and send a Zoom link at the last minute if there are technical issues with Riverside during a recording.</li>
+                            <li>Be ready to assist Hillary with recording if she needs help with Riverside.</li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-6 border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Daily Checklist for Podcast Support</h3>
+                    <div class="space-y-2">
+                        <div class="checklist-item"><input type="checkbox" id="ps-c1"><label for="ps-c1">Check Hillary's calendar for any completed 30-minute connection calls where she decided on a podcast guest.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c2"><label for="ps-c2">Send the prospective guest the ClickUp form.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c3"><label for="ps-c3">Follow up on any guests who have not filled out the form within a day or two.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c4"><label for="ps-c4">Once a guest submits the form, send them the "Relaunch to Rich Life" podcast recording calendar link using the provided template.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c5"><label for="ps-c5">For any direct website submissions, check with Hillary to see if she wants a pre-call, or if not, review their social media and "relaunch story" to determine their suitability.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c6"><label for="ps-c6">Check the calendar for upcoming podcast recordings.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c7"><label for="ps-c7">The day before a podcast recording, send the guest a reminder email.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c8"><label for="ps-c8">Ensure the calendar invite for the podcast recording contains the Riverside link and all attendees (Hillary, guest, and producer).</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c9"><label for="ps-c9">If a guest has not confirmed their attendance, reach out to them to verify the time.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c10"><label for="ps-c10">After a podcast recording is complete, log into Riverside and get the recording link.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c11"><label for="ps-c11">Fill out and submit RJ's podcast manager form with the Riverside link and guest information.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c12"><label for="ps-c12">Check the ClickUp calendar for the podcast release date (always a Wednesday).</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c13"><label for="ps-c13">On the Monday or Friday after a podcast is released, send the guest a follow-up email with the social media assets from the Hello Drive.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c14"><label for="ps-c14">Add new guest information to the shared Google Sheet for future reference.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c15"><label for="ps-c15">Be prepared to create and send a Zoom link at the last minute if there are technical issues with Riverside during a recording.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="ps-c16"><label for="ps-c16">Be ready to assist Hillary with recording if she needs help with Riverside.</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flip Your World Program SOPs -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H3a1 1 0 01-1-1v-3a1 1 0 011-1h1a2 2 0 100-4H3a1 1 0 01-1-1V7a1 1 0 011-1h3a1 1 0 011-1v-1z"></path></svg>
+                        Flip Your World Program SOPs
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+                <div class="accordion-content">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Flip Your World Program Standard Operating Procedures (SOPs)</h3>
+                    <p class="mb-4 text-gray-600">This section outlines the standard operating procedures for managing the "Flip Your World" (FYW) program, from onboarding new members to wrapping up a cohort.</p>
+
+                    <div class="sop-list mb-6">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">1. Onboarding a New Cohort</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Cohort Start Date:</strong> New cohort begins on the first Monday of each month (e.g., Cohort 5 begins July 7th at noon Mountain Time).</li>
+                            <li><strong>Enrollment:</strong> New client info sent to Slack.</li>
+                            <li><strong>Initial Welcome Email:</strong> Send a personal welcome email the week before the cohort begins using the provided template (automated funnel not fully built).</li>
+                            <li><strong>Mighty Networks Invitation:</strong> Include a link to join Mighty Networks in the initial email. Manually add new members to the Mighty Networks group using Hillary's account.</li>
+                            <li><strong>Gifting:</strong> If a spot is "gifted," you'll receive the email from Hillary and are responsible for outreach and onboarding.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">2. Creating the Mighty Networks Space</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>New Space:</strong> Create a new space for each cohort under "Flip Your World in 40 Days" tab. Name format: "Quantum Success Circle, Cohort [Number]." Set privacy to "Secret."</li>
+                            <li><strong>Welcoming Members:</strong> Post an initial welcome message and cohort call schedule in the new space (reiterates email/calendar info).</li>
+                            <li><strong>Adding to Network:</strong> After creating the space, add new members by copying/pasting emails into "Invite people to join."</li>
+                            <li><strong>Shared Resources:</strong> Members get access to "Live Events and Replays" and "Resources" tabs.</li>
+                            <li><strong>Session Assignments:</strong> Post workbook/worksheet for each session in the cohort's feed. Can also add to main "Resources" tab.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">3. Scheduling and Managing Calls</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Creating Zoom Meetings:</strong> Responsible for recurring Zoom meetings for all cohort calls.
+                                <ul class="list-circle ml-6 mt-2">
+                                    <li><strong>Hillary's calls:</strong> 10:00 AM or noon Mountain Time (alternates with each cohort).</li>
+                                    <li><strong>Patty's calls:</strong> Always 11:00 AM Mountain Time.</li>
+                                    <li><strong>Shannon's calls (GSD sessions):</strong> Always 1:00 PM Mountain Time on Thursdays.</li>
+                                    <li><strong>Dr. Kelley's calls:</strong> During second and third week.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Posting Links:</strong> Post Zoom link in cohort's Mighty Networks feed before each call as a reminder.</li>
+                            <li><strong>Action Steps:</strong> After Hillary's calls, post a summary of action steps in the feed and send via email.</li>
+                            <li><strong>Recordings:</strong> All calls recorded on Zoom and housed in "Flip Your World Zoom account."</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">4. Email Communication</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Email Schedule:</strong> You and Shannon split emails: You send Mondays, Wednesdays, Fridays. Shannon sends Tuesdays, Thursdays, Saturdays.</li>
+                            <li><strong>Content:</strong> Emails reference the day's call and reiterate action items.</li>
+                            <li><strong>Workbooks/Worksheets:</strong> Sent via email and posted in Mighty Networks space.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">5. Program Wrap-up and 333 Inner Circle</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Wrap-up Process:</strong> No formal wrap-up. Patty introduces the 333 Inner Circle program.</li>
+                            <li><strong>Future Enrollment:</strong> All cohort members invited to 333 program. Whether they purchase or not, they remain on the Relaunch email list. (333 program is in early development).</li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-6 border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Daily Checklist for Flip Your World Program</h3>
+                    <div class="space-y-2">
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c1"><label for="fyw-c1">On the week before a new cohort, send out the initial welcome email and Mighty Networks invitation.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c2"><label for="fyw-c2">Create a new "Quantum Success Circle" space in Mighty Networks for the new cohort.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c3"><label for="fyw-c3">Create all recurring Zoom meetings for the cohort calls.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c4"><label for="fyw-c4">Post the call schedule and a welcome message in the new Mighty Networks space.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c5"><label for="fyw-c5">Post the Zoom links in the Mighty Networks feed before each call.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c6"><label for="fyw-c6">Send your scheduled emails to the cohort members on Mondays, Wednesdays, and Fridays.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c7"><label for="fyw-c7">After Hillary's calls, post the action steps in the Mighty Networks feed and send them via email.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c8"><label for="fyw-c8">Respond to any emails from cohort members with questions or concerns.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="fyw-c9"><label for="fyw-c9">Ensure the shared Google Sheet with cohort information (names, emails, cohort start/end dates) is up to date.</label></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIP Client Management SOPs -->
+            <div class="accordion-item">
+                <div class="accordion-header rounded-b-lg">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H2v-2a3 3 0 015.356-1.857M17 20v-2c0-.18-.01-.36-.02-.54m0 0A2.502 2.502 0 0015 12.5a2.502 2.502 0 00-2.793 2.577C12.91 15.636 13.5 16 14 16h1m-4 0v-2.5l-3 1m3-1l-3 1m0 0v-2.5m4-4a2.5 2.5 0 100-5 2.5 2.5 0 000 5zm-9 0a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"></path></svg>
+                        VIP Client Management SOPs
+                    </div>
+                    <svg class="accordion-icon w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </div>
+                <div class="accordion-content">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">VIP Client Management Standard Operating Procedures (SOPs)</h3>
+                    <p class="mb-4 text-gray-600">This section details the procedures for managing Hillary's one-on-one coaching clients, from the initial contract to the ongoing management of their sessions.</p>
+
+                    <div class="sop-list mb-6">
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">1. Onboarding New Clients</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Client Interest:</strong> New clients typically email Hillary directly.</li>
+                            <li><strong>Contract Preparation:</strong> Prepare the contract using a provided template. Hillary briefs you on coaching duration (e.g., six months, one year); ask if not specified.</li>
+                            <li><strong>Communication with the Accountant:</strong> Always inform Andrew (accountant) about a new coaching client, including contract being sent and program amount. Attach a copy of the contract.</li>
+                            <li><strong>Contract Signing:</strong> Contract signed electronically via DocuSign (ensure your account is set up). Notify Andrew once signed for invoicing setup.</li>
+                            <li><strong>Initial Call:</strong> Hillary likes to schedule one-on-one coaching calls on the same day, typically Mondays or Tuesdays.</li>
+                        </ul>
+
+                        <h4 class="font-semibold text-lg mb-2 text-gray-700">2. Managing Ongoing Coaching Sessions</h4>
+                        <ul class="list-disc ml-6 mb-4">
+                            <li><strong>Call Cadence:</strong> Standard is "three calls on, one call off" (general rule, adjust based on Hillary's availability).</li>
+                            <li><strong>Emergency Protocol:</strong> Clients allowed one "pass" for a family emergency with notice.</li>
+                            <li><strong>Documentation and Call Notes:</strong>
+                                <ul class="list-circle ml-6 mt-2">
+                                    <li><strong>Initial Worksheet:</strong> Client fills out background info worksheet at program start (linked in shared document).</li>
+                                    <li><strong>Google Document:</strong> After the first call, create a new Google document for the client. House the initial worksheet and a summary of the last call. This is a quick reference for Hillary before each session.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Client List:</strong> Maintain a list of past and present clients, including active status.</li>
+                        </ul>
+                    </div>
+
+                    <hr class="my-6 border-gray-200">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">Daily Checklist for VIP Client Support</h3>
+                    <div class="space-y-2">
+                        <div class="checklist-item"><input type="checkbox" id="vip-c1"><label for="vip-c1">Check Hillary's email for any new clients expressing interest in one-on-one coaching.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="vip-c2"><label for="vip-c2">Draft a new contract for any new client using the provided template, ensuring the dates and coaching duration are correct.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="vip-c3"><label for="vip-c3">Send the contract to the new client via DocuSign.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="vip-c4"><label for="vip-c4">Email Andrew, our accountant, to inform him about the new client, the contract, and the amount.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="vip-c5"><label for="vip-c5">Upon confirmation of the signed contract, email Andrew again to set up invoicing.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="vip-c6"><label for="vip-c6">Schedule the client's first call on a Monday or Tuesday, per Hillary's preference.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="vip-c7"><label for="vip-c7">After a client's first call, create a Google document for them that houses their initial worksheet and a summary of their previous sessions.</label></div>
+                        <div class="checklist-item"><input type="checkbox" id="vip-c8"><label for="vip-c8">Ensure the list of past and present clients is up to date.</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.accordion-icon');
+
+                    // Toggle active class on header and content
+                    this.classList.toggle('active');
+                    content.classList.toggle('active');
+
+                    // Rotate icon
+                    icon.classList.toggle('active');
+
+                    // Optional: Close other open accordions
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== this && otherHeader.classList.contains('active')) {
+                            otherHeader.classList.remove('active');
+                            otherHeader.nextElementSibling.classList.remove('active');
+                            otherHeader.querySelector('.accordion-icon').classList.remove('active');
+                        }
+                    });
+                });
+            });
+
+            // Persist checkbox state (simple example using localStorage)
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                const storedChecked = localStorage.getItem(checkbox.id);
+                if (storedChecked === 'true') {
+                    checkbox.checked = true;
+                }
+
+                checkbox.addEventListener('change', function() {
+                    localStorage.setItem(this.id, this.checked);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
